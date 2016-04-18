@@ -22,4 +22,40 @@ public class PingPongTest {
     expected.add("ping");
     assertEquals(expected, testPingPong.pingPong(3));
   }
+
+  @Test
+  public void PingPong_divisibleByFive_Array() {
+    PingPong testPingPong = new PingPong();
+    ArrayList<Object> expected = new ArrayList<Object>();
+    expected.add(1);
+    expected.add(2);
+    expected.add("ping");
+    expected.add(4);
+    expected.add("pong");
+    assertEquals(expected, testPingPong.pingPong(5));
+  }
+
+  @Test
+  public void PingPong_divisibleByFifteen_Array() {
+    PingPong testPingPong = new PingPong();
+    ArrayList<Object> expected = new ArrayList<Object>();
+    expected.add(1);
+    expected.add(2);
+    expected.add("ping");
+    expected.add(4);
+    expected.add("pong");
+    expected.add("ping");
+    expected.add(7);
+    expected.add(8);
+    expected.add("ping");
+    expected.add("pong");
+    expected.add(11);
+    expected.add("ping");
+    expected.add(13);
+    expected.add(14);
+    expected.add("PINGPONG");
+    assertEquals(expected, testPingPong.pingPong(15));
+  }
+
+
 }
