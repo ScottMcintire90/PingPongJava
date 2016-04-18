@@ -1,21 +1,15 @@
 import org.junit.*;
 import static org.junit.Assert.*;
+import java.util.ArrayList;
 
 public class PingPongTest {
 
   @Test
-    public void isPingPong_forNumberDivisibleByFifteen_true() {
-      PingPong pingPong = new PingPong();
-      assertEquals(true, pingPong.isPingPong(15));
-    }
-  @Test
-    public void isPingPong_forNumberDivisibleByFive_true() {
-      PingPong pingPong = new PingPong();
-      assertEquals(true, pingPong.isPingPong(5));
-    }
-  @Test
-    public void isPingPong_forNumberDivisibleByThree_true() {
-      PingPong pingPong = new PingPong();
-      assertEquals(true, pingPong.isPingPong(3));
-    }
+  public void PingPong_countUpToGivenNumber_Array() {
+    PingPong testPingPong = new PingPong();
+    ArrayList<Object> expected = new ArrayList<Object>();
+    expected.add(1);
+    expected.add(2);
+    assertEquals(expected, testPingPong.pingPong(2));
+  }
 }

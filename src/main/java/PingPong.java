@@ -1,16 +1,13 @@
+import java.util.ArrayList;
+
 public class PingPong {
   public static void main(String[] args) {}
 
-
-public Boolean isPingPong(Integer pingPong) {
-  if (pingPong % 15 == 0) {
-    return true;
-  } else if (pingPong % 5 == 0) {
-    return true;
-  } else if (pingPong % 3 == 0){
-    return true;
-  } else {
-    return false;
+public Object pingPong(Integer testPingPong) {
+  ArrayList<Object> pingPongArray = new ArrayList<Object>();
+  for (Integer index = 1; index <= testPingPong; index++) {
+    pingPongArray.add(index);
   }
- }
+  return pingPongArray;
+  }
 }
