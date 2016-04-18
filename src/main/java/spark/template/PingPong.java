@@ -22,10 +22,10 @@ public class PingPong {
 
       String inputNumber = request.queryParams("inputtedNumber");
       Integer countUpTo = Integer.parseInt(inputNumber);
-      ArrayList<Object> pingPong = pingPong(countUpTo);
+      ArrayList<Object> results = new ArrayList<Object>();
+      results = PingPong.pingPong(countUpTo);
 
-      model.put("pingPong", pingPong);
-      model.put("userNumber", request.queryParams("userNumber"));
+      model.put("results", results);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
   }
