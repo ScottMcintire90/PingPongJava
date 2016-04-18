@@ -12,4 +12,14 @@ public class PingPongTest {
     expected.add(2);
     assertEquals(expected, testPingPong.pingPong(2));
   }
+
+  @Test
+  public void PingPong_divisibleByThree_Array() {
+    PingPong testPingPong = new PingPong();
+    ArrayList<Object> expected = new ArrayList<Object>();
+    expected.add(1);
+    expected.add(2);
+    expected.add("ping");
+    assertEquals(expected, testPingPong.pingPong(3));
+  }
 }

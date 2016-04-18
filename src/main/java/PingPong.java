@@ -6,7 +6,13 @@ public class PingPong {
 public Object pingPong(Integer testPingPong) {
   ArrayList<Object> pingPongArray = new ArrayList<Object>();
   for (Integer index = 1; index <= testPingPong; index++) {
-    pingPongArray.add(index);
+
+      if (index % 3 == 0) {
+        pingPongArray.add("ping");
+      }
+      else {
+        pingPongArray.add(index);
+      }
   }
   return pingPongArray;
   }
